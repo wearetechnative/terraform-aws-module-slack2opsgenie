@@ -30,8 +30,7 @@ resource "aws_lambda_permission" "allow_invoke" {
   statement_id  = "AllowPublicInvoke"  
   action        = "lambda:InvokeFunction"
   principal     = "*"
-  function_name = module.lambda_slack2opsgenie.lambda_function_name  
-  qualifier     = "$LATEST"  
+  function_name = module.lambda_slack2opsgenie.lambda_function_name   
 }
 
 resource "aws_lambda_permission" "allow_invoke_function_url" {
@@ -39,7 +38,6 @@ resource "aws_lambda_permission" "allow_invoke_function_url" {
   action        = "lambda:InvokeFunctionUrl"
   principal     = "*"
   function_name = module.lambda_slack2opsgenie.lambda_function_name
-  qualifier     = "$LATEST"  
 }  
 
 #creates a iam role for lambda that sends the message with proper keyword in slack channel to opsgenie to create an alert 
