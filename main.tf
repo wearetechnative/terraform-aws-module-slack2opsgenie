@@ -2,7 +2,7 @@
 module "lambda_slack2opsgenie" {
   source = "github.com/wearetechnative/terraform-aws-lambda.git?ref=fe102f9e43209b47bf919be75066df102458d8d9"
   name              = var.lambda_name
-  role_arn          = module.iam_role_lambda_instance_scheduler.role_arn
+  role_arn          = module.iam_role_slack2opsgenie.role_arn
   role_arn_provided = true
   kms_key_arn       = var.kms_key_arn
   handler     = "slack2opsgenie.handler"
