@@ -20,6 +20,11 @@ module "lambda_slack2opsgenie" {
     SQS_URL = var.sqs_opsgenie_url
   }
 } 
+
+resource "aws_lambda_function_url" "slack2opsgenie_functionurl" {
+  function_name      = module.lambda_slack2opsgenie.lambda_function_name
+  authorization_type = "NONE"
+}
 #creates a iam role for lambda that sends the message with proper keyword in slack channel to opsgenie to create an alert 
 module "iam_role_slack2opsgenie" {
   source    = "github.com/wearetechnative/terraform-aws-iam-role.git?ref=9229bbd0280807cbc49f194ff6d2741265dc108a"
