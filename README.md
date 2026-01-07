@@ -90,3 +90,41 @@ To use this module ...
 
 <!-- BEGIN_TF_DOCS -->
 <!-- END_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_iam_role_slack2opsgenie"></a> [iam\_role\_slack2opsgenie](#module\_iam\_role\_slack2opsgenie) | github.com/wearetechnative/terraform-aws-iam-role.git | 9229bbd0280807cbc49f194ff6d2741265dc108a |
+| <a name="module_lambda_slack2opsgenie"></a> [lambda\_slack2opsgenie](#module\_lambda\_slack2opsgenie) | github.com/wearetechnative/terraform-aws-lambda.git | fe102f9e43209b47bf919be75066df102458d8d9 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_kms_grant.a](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_grant) | resource |
+| [aws_iam_policy_document.slack2opsgenie](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| [aws_ssm_parameter.bot_user_token](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+| [aws_ssm_parameter.slack_signing_secret](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | KMS key to use for encryption | `string` | n/a | yes |
+| <a name="input_lambda_name"></a> [lambda\_name](#input\_lambda\_name) | n/a | `string` | `"slack2opsgenie"` | no |
+| <a name="input_sqs_dlq_arn"></a> [sqs\_dlq\_arn](#input\_sqs\_dlq\_arn) | Dead Letter Queue for on\_failure delivery of invocations | `string` | n/a | yes |
+| <a name="input_sqs_opsgenie_url"></a> [sqs\_opsgenie\_url](#input\_sqs\_opsgenie\_url) | SQS URL | `string` | `"https://sqs.eu-central-1.amazonaws.com/611159992020/sqs-opsgenie-lambda-queue-20220711145511259200000002"` | no |
+
+## Outputs
+
+No outputs.
