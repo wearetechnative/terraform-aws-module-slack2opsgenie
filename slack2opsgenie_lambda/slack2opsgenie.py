@@ -180,7 +180,7 @@ def _build_direct_message_payload(slack_body: dict) -> dict:
     }
 
 
-def lambda_handler(event, context):
+def handler(event, context):
     headers = event.get("headers") or {}
     raw_body = event.get("body") or ""
 
