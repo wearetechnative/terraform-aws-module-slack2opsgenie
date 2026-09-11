@@ -60,7 +60,7 @@ publication, you can publish a first version.
 > END INSTRUCTION FOR TECHNATIVE ENGINEERS
 
 
-# Terraform AWS [Slack2Opsgenie] ![](https://img.shields.io/github/workflow/status/TechNative-B-V/terraform-aws-module-name/tflint.yaml?style=plastic)
+# Terraform AWS [Slack2Opsgenie] ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-module-slack2opsgenie/tflint.yaml?branch=main&style=plastic)
 
 <!-- SHIELDS -->
 
