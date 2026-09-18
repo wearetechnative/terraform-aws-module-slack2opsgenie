@@ -1,6 +1,6 @@
 > START INSTRUCTION FOR TECHNATIVE ENGINEERS
 
-# terraform-aws-module-template
+# terraform-aws-module-template ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-module-slack2opsgenie/lint.yaml?branch=main&style=plastic&label=lint) ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-module-slack2opsgenie/security-scan.yaml?branch=main&style=plastic&label=security)
 
 Template for creating a new TerraForm AWS Module. For TechNative Engineers.
 
@@ -60,7 +60,7 @@ publication, you can publish a first version.
 > END INSTRUCTION FOR TECHNATIVE ENGINEERS
 
 
-# Terraform AWS [Slack2Opsgenie] ![](https://img.shields.io/github/workflow/status/TechNative-B-V/terraform-aws-module-name/tflint.yaml?style=plastic)
+# Terraform AWS [Slack2Opsgenie]
 
 <!-- SHIELDS -->
 
